@@ -56,6 +56,12 @@
             <option>--arch</option>.
         </para>
         <para>
+            If <arg choice="plain">REF</arg> does not exactly match an installed app or runtime
+            but it's similar (e.g. "firefox" is similar to "org.mozilla.firefox") you will be
+            prompted to confirm. This behavior can be disabled by including a slash as the
+            last character of <arg choice="plain">REF</arg>.
+        </para>
+        <para>
             By default, Flatpak will look for the application or runtime in the per-user
             installation first, then in all system installations. This can be overridden
             with the <option>--user</option>, <option>--system</option> and
@@ -730,6 +736,9 @@ key=v1;v2;
 
         <para>
             <command>$ flatpak run org.gnome.gedit</command>
+        </para>
+        <para>
+            <command>$ flatpak run gedit</command>
         </para>
         <para>
             <command>$ flatpak run --devel --command=bash org.gnome.Builder</command>
