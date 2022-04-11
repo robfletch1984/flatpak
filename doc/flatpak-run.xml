@@ -59,7 +59,9 @@
             If <arg choice="plain">REF</arg> does not exactly match an installed app or runtime
             but it's similar (e.g. "firefox" is similar to "org.mozilla.firefox") you will be
             prompted to confirm. This behavior can be disabled by including a slash as the
-            last character of <arg choice="plain">REF</arg>.
+            last character of <arg choice="plain">REF</arg>. The <option>-y</option> option can
+            be used to skip the prompt when there is only one match, even if the match is not
+            an exact match.
         </para>
         <para>
             By default, Flatpak will look for the application or runtime in the per-user
@@ -724,6 +726,14 @@ key=v1;v2;
                     This option will usually only be useful if it is
                     combined with <option>--app-path=</option> and
                     <option>--env=LD_LIBRARY_PATH=<replaceable>...</replaceable></option>.
+                </para></listitem>
+            </varlistentry>
+
+            <varlistentry>
+                <term><option>-y</option></term>
+                <term><option>--assumeyes</option></term>
+                <listitem><para>
+                    Automatically answer yes to all questions (or pick the most prioritized answer).
                 </para></listitem>
             </varlistentry>
 
